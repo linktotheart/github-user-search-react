@@ -1,4 +1,6 @@
 import React from 'react'
+import {Link } from 'react-router-dom'
+
 
 const  Navbar = (props) => {
    return (
@@ -10,7 +12,14 @@ const  Navbar = (props) => {
                   {props.title} 
                </h4>
                {props.children}
+
+               <div className="nav ml-auto">
+                  <Link to="/" className={`nav-link ${Link.isExact ? "active" : ""}`}>Home</Link>
+                  <Link to="/about" className="nav-link">About</Link>
+               </div>
              </div>
+
+
           </nav>
 
    )

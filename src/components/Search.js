@@ -10,8 +10,14 @@ export class Search extends Component {
 
     formHandler = (e) => { 
         e.preventDefault(); 
-        this.props.search(this.state.text);
-        this.setState({ text: '' })
+
+        if (this.state.text === ''){
+            this.props.alert('Please enter something', 'warning ')
+        }
+        else {
+            this.props.search(this.state.text);
+            this.setState({ text: '' })
+        }
 
     }
 

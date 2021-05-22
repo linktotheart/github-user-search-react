@@ -1,4 +1,5 @@
 import React, { } from 'react'
+import { Link } from 'react-router-dom';
 
 const  User = (props) =>  {
    
@@ -15,9 +16,9 @@ const  User = (props) =>  {
                    <h3 className="mb-4 card-title">
                       {login}
                    </h3>
-                   <a href={html_url} className="btn btn-light">
-                     More 
-                   </a>
+                   <Link to={`/user/${login}`} className="btn btn-light">
+                     View More 
+                   </Link>
                 </div>
          </div>
       )
